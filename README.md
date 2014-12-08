@@ -1,6 +1,6 @@
 # PHP Test for Graze
 
-This is a private repository documenting my progress with the PHP test given by Graze.com
+This is a public repository documenting my progress with the PHP test given by Graze.com
 
 By inputting an account ID on the homepage (e.g. 10700), the account's history of boxes will appear, with the option to change the ratings of any given product.
 

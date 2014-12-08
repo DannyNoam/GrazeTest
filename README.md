@@ -10,6 +10,8 @@ Time permitting, the following (largely aesthetic) features would have been impl
 * Pagination for boxes
 * A generally nicer looking view
 
+I'm temporarily hosting it on my dissertation domain, http://vctra.de, if you wish to try it.
+
 Enjoy!
 
 Danny

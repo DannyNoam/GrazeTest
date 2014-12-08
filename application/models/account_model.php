@@ -124,6 +124,7 @@ class Account_model extends CI_Model
 	
 	/**
 	* Modifies the rating of a given product for a customer.
+	* If no rating exists, one is inserted into DB.
 	*
 	* @param accountNum The account ID.
 	* @param productID The product ID.
@@ -131,7 +132,14 @@ class Account_model extends CI_Model
 	*/
 	function modifyRating($accountNum, $productID, $rating)
 	{
-		$query = $this->db->query("UPDATE rating SET rating=$rating WHERE product_id=$productID AND account_id=$accountNum");
+		if(($this->getProductRating($productID, $accountNum) == "No rating"))
+		{
+			$query = $this->db->query("INSERT INTO rating VALUES ($productID, $accountNum, $rating)");
+		}
+		else
+		{
+			$query = $this->db->query("UPDATE rating SET rating=$rating WHERE product_id=$productID AND account_id=$accountNum");
+		}
 	}
 }
 ?>
